@@ -114,11 +114,8 @@ endmodule
 ### TRUTH TABLE 
 
 ## DOWN COUNTER:
-
-
-
-
-
-
+![DOWNCOUNTER](https://github.com/harish-ragavendra-25/Exp-7-Synchornous-counters-/assets/114852180/458c0af1-7aa9-413d-8b55-f540bb391d66)
+## UP COUNTER:
+![UPCOUNTER](https://github.com/harish-ragavendra-25/Exp-7-Synchornous-counters-/assets/114852180/ee740760-e4f2-4e9e-9ed6-424130bb4f9c)
 ### RESULTS 
 Thus Synchornous counters up counter and down counter circuit are studied and the truth table for different logic gates are verified.
