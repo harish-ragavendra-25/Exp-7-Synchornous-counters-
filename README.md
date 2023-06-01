@@ -46,8 +46,16 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 
 4-bit Count Down Counter
 ### Procedure
-/* write all the steps invloved */
 
+1.Create module projectname(input ,output) to start the verilog programming.
+
+2.create a if loop condition to increase the count in counter_up function.
+
+3.Similarly, create another loop for the down counter.
+
+4.End the verilog program using keyword endmodule.
+
+5.Get the timing diagram and RTL realization diagram for respective Counters.
 
 
 ### PROGRAM 
@@ -56,7 +64,7 @@ Program for flipflops  and verify its truth table in quartus using Verilog progr
 Developed by: HARISH RAGAVENDRA S
 RegisterNumber: 212222230045
 ```
-# DOWN COUNTER:
+## DOWN COUNTER:
 ```
 module counters(clk,A);
 input clk;
@@ -71,31 +79,41 @@ end
 endmodule
 ```
 
-
-
-
-
+## UP COUNTER:
+```
+module counters(clk,A);
+input clk;
+output reg [0:3]A;
+always @(posedge clk)
+begin
+	A[0]=(((A[2])&(A[3])&(A[1]))^A[0]);
+	A[1]=(((A[2])&(A[3]))^A[1]);
+	A[2]=(A[3])^A[2];
+	A[3]=1^A[3];
+end
+endmodule
+```
 ### RTL LOGIC UP COUNTER AND DOWN COUNTER  
-# DOWN COUNTER:
-
+## DOWN COUNTER:
 ![down counter rtl](https://github.com/harish-ragavendra-25/Exp-7-Synchornous-counters-/assets/114852180/c6938290-59bd-4ccd-88ba-95aa8854df29)
 
-
-
-
-
+## UP COUNTER:
+![RTL UPCOUNTER](https://github.com/harish-ragavendra-25/Exp-7-Synchornous-counters-/assets/114852180/a7453958-564c-4ef5-940c-347e19ddc645)
 
 ### TIMING DIGRAMS FOR COUNTER  
 
-# DOWN COUNTER:
+## DOWN COUNTER:
 
 ![TIMING DOWN COUNTER](https://github.com/harish-ragavendra-25/Exp-7-Synchornous-counters-/assets/114852180/be82bb25-790e-42d3-9fff-dd4cc9267aea)
 
+## UP COUNTER:
+
+![UPCOUNTER WAVEFORM](https://github.com/harish-ragavendra-25/Exp-7-Synchornous-counters-/assets/114852180/4b6d3c0c-0eef-4d7a-afb9-9c9c3dcfa591)
 
 
 ### TRUTH TABLE 
 
-# DOWN COUNTER:
+## DOWN COUNTER:
 
 
 
@@ -103,3 +121,4 @@ endmodule
 
 
 ### RESULTS 
+Thus Synchornous counters up counter and down counter circuit are studied and the truth table for different logic gates are verified.
